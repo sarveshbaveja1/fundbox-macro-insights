@@ -1,23 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-inter: "Inter", system-ui, sans-serif;
+  --font-space-mono: "Space Mono", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply bg-surface-muted text-brand-dark antialiased;
+    font-family: var(--font-inter);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold text-brand-dark;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .metric-value {
+    font-family: var(--font-space-mono);
+    @apply text-2xl font-bold tracking-tight;
+  }
+
+  .card {
+    @apply bg-white rounded-xl border border-surface-border shadow-sm;
+  }
+
+  .section-header {
+    @apply text-xs font-semibold uppercase tracking-widest text-brand-muted mb-4;
+  }
+
+  .change-positive {
+    @apply text-accent-green;
+  }
+
+  .change-negative {
+    @apply text-accent-red;
+  }
+
+  .change-neutral {
+    @apply text-brand-muted;
+  }
 }
 
 @layer utilities {

@@ -1,0 +1,92 @@
+{
+  "_meta": {
+    "lastUpdated": "2026-03-14",
+    "note": "Auto-updated daily by GitHub Actions. See scripts/fetch-data.py"
+  },
+  "recession": {
+    "sources": [
+      { "name": "Kalshi", "date": "2026-03-14", "probability": 35, "prior": 33, "change": 2 },
+      { "name": "Polymarket", "date": "2026-03-14", "probability": 35, "prior": 31, "change": 4 },
+      { "name": "Goldman Sachs", "date": "2026-03-11", "probability": 25, "prior": 20, "change": 5 }
+    ],
+    "average": { "current": 32, "prior": 28, "change": 4 }
+  },
+  "gdp": {
+    "quarter": "2026Q1",
+    "sources": [
+      { "name": "Atlanta Fed (GDPNow)", "date": "2026-03-13", "growth": 2.7, "prior": 2.1, "change": 0.6 },
+      { "name": "New York Fed", "date": "2026-03-13", "growth": 2.1, "prior": 2.2, "change": -0.1 },
+      { "name": "Goldman Sachs", "date": "2026-03-11", "growth": 2.2, "prior": 2.5, "change": -0.3 }
+    ],
+    "average": { "current": 2.3, "prior": 2.3, "change": 0 }
+  },
+  "inflation": {
+    "sources": [
+      { "name": "Cleveland Fed", "metric": "Core CPI MoM", "date": "2026-03-06", "current": 0.20, "prior": 0.20, "change": 0, "month": "March" },
+      { "name": "Cleveland Fed", "metric": "Core PCE MoM", "date": "2026-03-06", "current": 0.23, "prior": 0.23, "change": 0, "month": "March" },
+      { "name": "Cleveland Fed", "metric": "Core CPI YoY", "date": "2026-03-06", "current": 2.60, "prior": 2.40, "change": 0.20, "month": "March" },
+      { "name": "Cleveland Fed", "metric": "Core PCE YoY", "date": "2026-03-13", "current": 2.97, "prior": 2.83, "change": 0.14, "month": "March" }
+    ]
+  },
+  "jobs": {
+    "lastRelease": "2026-03-07",
+    "payrolls": { "value": -92000, "prior": 126000, "change": -218000, "note": "~30K of February loss due to temporary workers' strike" },
+    "unemploymentRate": { "value": 4.4, "prior": 4.28, "change": 0.12 },
+    "avgHourlyEarningsMoM": { "value": 0.4, "prior": 0.3, "change": 0.1 },
+    "avgHourlyEarningsYoY": { "value": 3.8, "prior": 3.7, "change": 0.1 },
+    "adpPrivate": { "value": 63000, "date": "2026-03-05" },
+    "initialJoblessClaims": { "value": 213000, "weekEnding": "2026-03-01" }
+  },
+  "fedFundsRate": {
+    "current": "3.50–3.75%",
+    "currentMid": 3.625,
+    "lastMeeting": "2026-01-28",
+    "nextMeeting": "2026-03-19",
+    "marketImpliedCuts2026": 2,
+    "goldmanCutForecast": [
+      { "meeting": "June 2026", "targetRange": "3.25–3.50%" },
+      { "meeting": "September 2026", "targetRange": "3.00–3.25%" }
+    ]
+  },
+  "consumerSentiment": {
+    "conferenceBoardConfidence": { "value": 84.5, "date": "2026-01-01", "note": "Lowest since May 2014, down 9.7 pts from December" },
+    "umichSentiment": { "value": 57.3, "date": "2026-02-01", "note": "Down 10% from prior year" }
+  },
+  "personalSavingsRate": {
+    "value": 3.5,
+    "date": "2025-11-01",
+    "longRunAverage": 7.0,
+    "note": "Half the long-run average; 2008 recession rate was 2–3%"
+  },
+  "oilPrice": {
+    "value": 103,
+    "priorWeek": 65,
+    "change": 38,
+    "date": "2026-03-04",
+    "note": "Surge driven by Hormuz disruption and Gulf production reductions"
+  },
+  "smallBusinessIndicators": {
+    "nfibOptimismIndex": { "value": 99.3, "date": "2026-01-01", "average52yr": 98 },
+    "experianSmallBusinessIndex": { "value": 42.0, "date": "2026-01-01", "note": "Rebounded in Q4 2025 and Q1 2026; >40 = expanding" },
+    "tariffAvgRate": { "current": 17, "ifAllAnnounced": 21, "note": "Highest effective rate since 1946" },
+    "tariffSmallBizMonthlyCost": 25000,
+    "bankTighteningPct": { "q1": 16, "q3": 8, "note": "SLOOS survey — pace of tightening moderated but still tightening" }
+  },
+  "consumerCredit": {
+    "creditCardDPD90Plus": { "transunion2026Forecast": 2.57, "note": "Essentially flat YoY; no relief expected" },
+    "subprimeOriginationShare": { "q1_2022": 23.1, "q3_2025": 16.4, "note": "Banks pulling back hard from sub-660 borrowers" },
+    "bnplLatePayment2025": { "value": 42, "prior2024": 39, "prior2023": 34, "genZRate": 51 },
+    "studentLoanDQPct": { "value": 20, "preParidemic": 6, "balanceDQPct": 10, "note": "Wage garnishment paused Feb 2026 per Dept of Education reversal" },
+    "equifaxBankCardDQRate": { "note": "Increased from mid-2025, still below same period in 2024 and 2025" }
+  },
+  "kShapedEconomy": {
+    "top10PctSpendingShare": { "value": 49.7, "date": "2025-Q2", "prior1990s": 35 },
+    "top1PctNetWorthShare": 31.7,
+    "bottom50PctNetWorthShare": 2.5,
+    "wageTrends": {
+      "lowIncomeQ1_Dec2025": 3.5,
+      "highIncomeQ4_Dec2025": 4.0,
+      "note": "First time in 15 years that high-income wage growth exceeds low-income"
+    }
+  }
+}

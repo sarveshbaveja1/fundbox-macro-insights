@@ -1,0 +1,32 @@
+[
+  {
+    "id": "2os-credit-risk-2025",
+    "title": "2OS Credit Risk Review — Q4 2025",
+    "date": "2025-11-01",
+    "category": "consumer",
+    "source": "2OS",
+    "keyFindings": [
+      "2025 credit card vintage delinquencies tracking the 2022 vintage — the worst-performing in six years",
+      "Credit score migration risk: pandemic-era scores are unwinding as forbearance effects fade",
+      "Auto loan DQs remain elevated but stable for past 3 years",
+      "BNPL late payments rising year-over-year (34% → 39% → 42%); mostly unreported to bureaus"
+    ],
+    "synthesis": "The 2OS Q4 2025 credit risk review corroborates TransUnion's findings on vintage deterioration while adding important nuance on credit score migration. The core argument: credit scores issued between 2020 and 2022 were structurally inflated by stimulus payments, eviction moratoria, student loan pauses, and broad forbearance programs. These temporary supports masked true risk capacity. As these effects unwind in 2025–26, borrowers are reverting to their actual risk tiers. This creates a dangerous lag in any score-based underwriting system: originations made at those elevated scores are now seasoning under conditions that reflect the borrower's true risk profile. The 2OS analysis particularly flags BNPL as an emerging systemic risk — with 42% of users missing payments in 2025 and the balance largely off-bureau, the true debt service burden for a meaningful segment of the borrower population is systematically underestimated. For small business lenders, the cross-contamination of personal and business credit is a compounding factor: small business owners whose personal credit is deteriorating are more likely to draw on business credit lines for personal obligations.",
+    "pdfPath": null
+  },
+  {
+    "id": "2os-smb-2025",
+    "title": "2OS Small Business Credit Review — Q3 2025",
+    "date": "2025-09-01",
+    "category": "small-business",
+    "source": "2OS",
+    "keyFindings": [
+      "Small business charge-off rates above pre-pandemic levels and significantly above 2022–23",
+      "Banks tightened standards for small business loans throughout 2025; pace moderated but direction unchanged",
+      "Businesses serving lower-income consumers face margin squeeze from tariffs and reduced consumer spending",
+      "Adverse selection accelerating as banks pull subprime origination share from 23.1% to 16.4%"
+    ],
+    "synthesis": "The 2OS Q3 2025 small business credit review identifies adverse selection as the most important near-term risk for alternative small business lenders. As banks have systematically pulled back from sub-660 borrowers — with subprime origination share falling nearly 7 percentage points since 2022 — the population of small business applicants seeking alternative credit is structurally riskier than historical baselines would suggest. This is not random variation; it is a deliberate population shift driven by bank underwriting tightening. Volume growth at alternative lenders in this environment is a warning signal, not a positive indicator. The 2OS analysis also highlights industry concentration risk: small businesses serving lower-income consumers (discount retail, food service, personal services) face a compounding squeeze — their customers are spending less while their input costs rise from tariff pass-throughs. This dynamic typically precedes defaults by 3–6 months, making it a leading indicator worth monitoring closely.",
+    "pdfPath": null
+  }
+]

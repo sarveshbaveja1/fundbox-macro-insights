@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fundbox Macro Insights
 
-## Getting Started
+A public-facing, Fundbox-branded website surfacing macro lending industry trends for risk managers at banks and fintech lenders. Hosted on Netlify, source on GitHub, data auto-updated daily.
 
-First, run the development server:
+## Pages
+
+| Page | URL | Description |
+|------|-----|-------------|
+| Dashboard | `/` | KPI strip + section overview |
+| Economic Indicators | `/economy` | GDP, inflation, jobs, Fed rates, savings |
+| Consumer Credit | `/consumer-credit` | Delinquencies, BNPL, K-shape, report syntheses |
+| Small Business Credit | `/small-business` | SBI, charge-offs, tariffs, adverse selection |
+| Betting Markets | `/markets` | Recession odds, GDP predictions |
+
+## Local Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Open http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Daily Data Updates
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+`data/macro.json` is auto-refreshed daily by GitHub Actions at 8am ET.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Required GitHub Secrets
 
-## Learn More
+| Secret | Description |
+|--------|-------------|
+| `FRED_API_KEY` | Free key from [fred.stlouisfed.org](https://fred.stlouisfed.org/docs/api/api_key.html) |
+| `NETLIFY_DEPLOY_HOOK` | Webhook from Netlify → Site Settings → Build & Deploy → Build hooks |
 
-To learn more about Next.js, take a look at the following resources:
+### Manual fetch (local)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+FRED_API_KEY=your_key python scripts/fetch-data.py
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Adding a Report (TransUnion or 2OS)
 
-## Deploy on Vercel
+1. Add the PDF to `public/reports/filename.pdf`
+2. Add an entry to `data/transunion-reports.json` or `data/2os-reports.json`:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```json
+{
+  "id": "unique-id",
+  "title": "Report Title",
+  "date": "2026-03-01",
+  "category": "consumer",
+  "source": "TransUnion",
+  "keyFindings": ["Finding 1", "Finding 2"],
+  "synthesis": "Full synthesis text here...",
+  "pdfPath": "/reports/filename.pdf"
+}
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `"category": "consumer"` → Consumer Credit page
+- `"category": "small-business"` → Small Business Credit page
+- Set `"pdfPath": null` if no PDF — the Download button won't appear
+
+3. Commit and push → Netlify auto-deploys.
+
+## Netlify Deployment
+
+1. Import the GitHub repo in Netlify
+2. Build command: `npm run build`
+3. Publish directory: `out`
+4. Add `NETLIFY_DEPLOY_HOOK` as a GitHub secret
+
+## Data Sources
+
+- **FRED** — GDP, CPI, PCE, savings rate, Fed funds, consumer sentiment
+- **BLS** — Nonfarm payrolls, unemployment rate
+- **Atlanta Fed GDPNow** — Q1 real GDP nowcast
+- **Kalshi** — Prediction market recession probability
+- **TransUnion / 2OS** — Manually curated via `data/` JSON files

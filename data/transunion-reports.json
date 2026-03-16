@@ -1,0 +1,32 @@
+[
+  {
+    "id": "tu-2026-forecast",
+    "title": "TransUnion 2026 Consumer Credit Forecast",
+    "date": "2025-12-01",
+    "category": "consumer",
+    "source": "TransUnion",
+    "keyFindings": [
+      "Credit card 90+ DPD projected at 2.57% for 2026 — essentially flat YoY, no relief expected",
+      "2025 credit card vintage delinquencies tracking the 2022 vintage — worst-performing in six years",
+      "Subprime origination share declined from 23.1% (Q1 2022) to 16.4% (Q3 2025) as banks tighten",
+      "Average credit score drop post-student-loan-default: 63 points; can reach 175 points for 780+ score borrowers",
+      "BNPL late payment rate hit 42% in 2025 — largely unreported to bureaus, creating 'phantom debt' risk"
+    ],
+    "synthesis": "TransUnion's 2026 forecast paints a picture of sustained credit stress with no near-term recovery. The headline 90+ DPD projection of 2.57% for credit cards represents a plateau at elevated levels rather than improvement — and the underlying vintage data is more concerning. The 2025 origination cohort is tracking the 2022 vintage, which was the worst-performing in six years. This is particularly important for lenders relying on score-based models: pandemic-era forbearance and stimulus programs artificially inflated credit scores, and as those effects unwind, borrowers are migrating back to their true risk tier. A borrower underwritten at 650 in 2021–22 may now be performing like a sub-600. The subprime pullback by banks (origination share down from 23.1% to 16.4%) is simultaneously reducing competition and increasing adverse selection risk for alternative lenders — displaced applicants weren't declined at random. The BNPL phantom debt layer compounds this: with 42% of users making late payments in 2025 and most balances unreported to bureaus, score-based underwriting is systematically understating leverage for a large segment of the borrower population.",
+    "pdfPath": null
+  },
+  {
+    "id": "tu-2025-auto",
+    "title": "TransUnion Auto Loan Stress Report — Q3 2025",
+    "date": "2025-10-01",
+    "category": "consumer",
+    "source": "TransUnion",
+    "keyFindings": [
+      "Auto loan delinquencies remain elevated for the third consecutive year but have stabilized",
+      "Average monthly payments remain at historic highs as vehicle prices have not normalized post-pandemic",
+      "High payment burden crowds out capacity for multi-product borrowers, increasing default correlation risk"
+    ],
+    "synthesis": "Auto loan stress has been a persistent structural issue since 2022. Unlike credit cards — where vintage deterioration is a relatively recent trend — auto delinquencies have been elevated for three full years. The primary driver is not income loss but payment burden: post-pandemic vehicle price inflation has not unwound, keeping average monthly auto payments near historic highs even as interest rates have eased slightly. For lenders with multi-product exposure, this creates a correlation risk: the same borrower with a stressed auto payment is more likely to miss obligations on a business credit line or personal loan. TransUnion's data shows that for borrowers in the 580–680 score range with auto exposure, the incremental default probability on other products is materially higher than score alone would suggest.",
+    "pdfPath": null
+  }
+]
