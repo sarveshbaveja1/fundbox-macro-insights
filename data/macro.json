@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "lastUpdated": "2026-05-07",
+    "lastUpdated": "2026-05-08",
     "note": "Auto-updated daily by GitHub Actions. See scripts/fetch-data.py"
   },
   "recession": {
@@ -107,15 +107,15 @@
   "jobs": {
     "lastRelease": "2026-03-07",
     "payrolls": {
-      "value": 158637000,
-      "prior": 158459000,
+      "value": 158736000,
+      "prior": 158621000,
       "change": -218000,
       "note": "~30K of February loss due to temporary workers' strike"
     },
     "unemploymentRate": {
       "value": 4.3,
-      "prior": 4.4,
-      "change": -0.1
+      "prior": 4.3,
+      "change": 0.0
     },
     "avgHourlyEarningsMoM": {
       "value": 0.4,
